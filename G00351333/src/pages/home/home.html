@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Home Page
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+  <ion-content class="card-background-page">
+
+    <ion-card (click)="openAvailable()">
+      <img src="../../assets/imgs/available.jpg"/>
+      <div class="card-title">Available</div>
+      <div class="card-subtitle">Click here for listings of available houses</div>
+    </ion-card>
+  
+    <ion-card (click)="openWanted()">
+      <img src="../../assets/imgs/wanted.jpg"/>
+      <div class="card-title">Wanted</div>
+      <div class="card-subtitle">Click here for listings of wanted ads</div>
+    </ion-card>
+
+</ion-content>
