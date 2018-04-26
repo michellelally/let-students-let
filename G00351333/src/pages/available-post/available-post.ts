@@ -32,5 +32,5 @@ phone:number;
     this.storage.set("phone", this.phone);
     this.navCtrl.pop();
   }
-
+  
 }

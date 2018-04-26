@@ -9,6 +9,7 @@ import { HomePage } from '../pages/home/home';
 import { WantedPage } from '../pages/wanted/wanted';
 import { AvailablePage } from '../pages/available/available';
 import { AvailablePostPage } from '../pages/available-post/available-post';
+import { IonicStorageModule } from '@ionic/storage';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AvailablePostPage } from '../pages/available-post/available-post';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [

@@ -32,11 +32,11 @@ phone:number;
 
   ionViewWillEnter(){
     this.storage.get("name").then((data) => {
-      this.name = data;
+        this.name = data;
       })
       this.storage.get("phone").then((data) => {
         this.phone = data;
-        })
+      })
       .catch((err) => {
         console.log("Database retrieval error");
       })
