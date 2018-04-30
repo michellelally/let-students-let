@@ -1,5 +1,11 @@
 page-available {
-    ion-button {
-        width: 300px;
+
+    .cards {
+        ion-card{
+            height: 250px;
+            width: 390px;
+            position: relative;
+        }
+        
     }
 }
