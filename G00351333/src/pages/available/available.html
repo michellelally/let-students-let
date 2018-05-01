@@ -13,26 +13,24 @@
 </ion-header>
 
 <ion-content padding>
-    <div style="text-align: center">
-        <button (click)="openAvailablePost()" ion-button large color="secondary" outline > Make a post </button>
-    </div>
+  <div style="text-align: center">
+    <button (click)="openAvailablePost()" ion-button large full color="secondary" outline> Make a post </button>
+  </div>
 
   <ion-card>
 
     <ion-item>
-      <ion-avatar item-start>
-        <img src="../../assets/imgs/house.jpg">
-      </ion-avatar>
       <h2> {{name}}</h2>
       <p> {{phone}}</p>
     </ion-item>
-  
-    <img src="../../assets/imgs/house.jpg">
-  
+
+    <img src="{{ image }}" />
+
     <ion-card-content>
-      <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
+      <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?!
+        Whoa. This is heavy.</p>
     </ion-card-content>
-  
+
     <ion-row>
       <ion-col>
         <button ion-button icon-left clear small>
@@ -52,6 +50,6 @@
         </ion-note>
       </ion-col>
     </ion-row>
-  
+
   </ion-card>
 </ion-content>

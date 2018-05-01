@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, } from 'ionic-angular';
 import { AvailablePostPage } from '../available-post/available-post';
 import { Storage } from '@ionic/storage';
+
+import { Camera, CameraOptions } from '@ionic-native/camera';
 
 
 /**
@@ -12,13 +14,17 @@ import { Storage } from '@ionic/storage';
  */
 
 @IonicPage()
+
 @Component({
   selector: 'page-available',
   templateUrl: 'available.html',
 })
 export class AvailablePage {
-name:string;
-phone:number;
+  name: string;
+  phone: number;
+  image: any;
+
+
   constructor(public navCtrl: NavController, public navParams: NavParams, public storage: Storage) {
   }
 
@@ -26,17 +32,20 @@ phone:number;
     console.log('ionViewDidLoad AvailablePage');
   }
 
-  openAvailablePost(){
+  openAvailablePost() {
     this.navCtrl.push(AvailablePostPage);
   }
 
-  ionViewWillEnter(){
+  ionViewWillEnter() {
     this.storage.get("name").then((data) => {
-        this.name = data;
-      })
-      this.storage.get("phone").then((data) => {
-        this.phone = data;
-      })
+      this.name = data;
+    })
+    this.storage.get("phone").then((data) => {
+      this.phone = data;
+    })
+    this.storage.get("image").then((data) => {
+      this.image = data;
+    })
       .catch((err) => {
         console.log("Database retrieval error");
       })

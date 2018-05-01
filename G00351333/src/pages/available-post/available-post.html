@@ -18,18 +18,22 @@
 
     <ion-item>
       <ion-label fixed>Your Name</ion-label>
-      <ion-input type="text" [(ngModel)]="name" ></ion-input>
+      <ion-input type="text" [(ngModel)]="name"></ion-input>
     </ion-item>
-  
+
     <ion-item>
       <ion-label fixed>Telephone</ion-label>
       <ion-input type="tel" [(ngModel)]="phone"></ion-input>
     </ion-item>
-  
+
   </ion-list>
   <br>
-  <button (click)="saveDetails()" ion-button color="secondary" outline >Post!</button>
+  <button (click)="choosePicture()" ion-button color="default" outline>Upload Photo</button>
+  <br>
+  <img src="{{ image }}" />
+  <br>
+  <button (click)="saveDetails()" ion-button color="secondary" outline full>Post!</button>
 
-  
-  
+
+
 </ion-content>
