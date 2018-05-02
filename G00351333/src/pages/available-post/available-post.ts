@@ -88,7 +88,7 @@ export class AvailablePostPage {
     console.log(this.monthsOrYears);
     this.storage.set("monthsOrYears", this.monthsOrYears);
     console.log(this.description);
-    this.storage.set("stay", this.description);
+    this.storage.set("description", this.description);
 
     
     this.storage.set("image", this.image);

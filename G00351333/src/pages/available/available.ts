@@ -3,8 +3,6 @@ import { IonicPage, NavController, NavParams, } from 'ionic-angular';
 import { AvailablePostPage } from '../available-post/available-post';
 import { Storage } from '@ionic/storage';
 
-import { Camera, CameraOptions } from '@ionic-native/camera';
-
 
 /**
  * Generated class for the AvailablePage page.

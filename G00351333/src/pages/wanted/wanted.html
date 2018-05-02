@@ -20,12 +20,15 @@
     <ion-card >
   
       <ion-item>
-        <h2> {{ type }}</h2>
-        <p> {{ area }}</p>
+        <h2> {{ name }}</h2>
+        <p> {{ type }}</p>
       </ion-item>
   
       <img src="{{ image }}" />
   
+      <ion-item>
+        <ion-label>Description</ion-label>
+      </ion-item>
       <ion-card-content>
         <p>{{ description }}</p>
       </ion-card-content>
@@ -33,8 +36,8 @@
       <ion-row>
         <ion-col>
           <button ion-button icon-left clear small left>
-            <ion-icon name="logo-euro"></ion-icon>
-            <div> {{ price }}</div>
+            <ion-icon name="md-locate"></ion-icon>
+            <div> {{ area }}</div>
           </button>
         </ion-col>
         <ion-col>
