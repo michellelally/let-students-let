@@ -38,7 +38,11 @@ export class WantedPage {
     console.log('ionViewDidLoad WantedPage');
   }
 
-    ionViewWillEnter() {
+  openWantedPost() {
+    this.navCtrl.push(WantedPostPage);
+  }
+
+  ionViewWillEnter() {
     this.storage.get("nameWanted").then((data) => {
       this.name = data;
     })

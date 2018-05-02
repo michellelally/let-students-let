@@ -37,13 +37,13 @@ export class AvailablePostPage {
   ionViewDidLoad() {
     this.ap.getAreasData().subscribe(data => {
       this.areas=data.areas;
-    })
+    })    
+
   }
 
   takePhoto() {
     const options: CameraOptions = {
       quality: 50,
-      sourceType: this.camera.PictureSourceType.PHOTOLIBRARY,
       destinationType: this.camera.DestinationType.DATA_URL,
       encodingType: this.camera.EncodingType.JPEG,
       mediaType: this.camera.MediaType.PICTURE,

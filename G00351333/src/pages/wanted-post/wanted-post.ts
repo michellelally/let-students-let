@@ -37,6 +37,7 @@ export class WantedPostPage {
     this.ap.getAreasData().subscribe(data => {
       this.areas=data.areas;
     })
+
   }
 
   saveDetails() {
@@ -59,6 +60,7 @@ export class WantedPostPage {
     console.log(this.description);
     this.storage.set("descriptionWanted", this.description);
     this.navCtrl.pop();
+    
   }
 
 }

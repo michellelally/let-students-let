@@ -36,6 +36,7 @@ export class AvailablePage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AvailablePage');
+
   }
 
   openAvailablePost() {
@@ -76,7 +77,8 @@ export class AvailablePage {
       .catch((err) => {
         console.log("Database retrieval error");
       })
-  }
+      this.storage.clear();
 
+  }
 
 }
