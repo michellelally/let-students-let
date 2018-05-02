@@ -8,9 +8,12 @@ import { Camera, CameraOptions } from '@ionic-native/camera';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { WantedPage } from '../pages/wanted/wanted';
+import { WantedPostPage } from '../pages/wanted-post/wanted-post';
 import { AvailablePage } from '../pages/available/available';
 import { AvailablePostPage } from '../pages/available-post/available-post';
 import { IonicStorageModule } from '@ionic/storage';
+import { HttpClientModule } from '@angular/common/http';
+import { AreasProvider } from '../providers/areas/areas';
 
 @NgModule({
   declarations: [
@@ -18,11 +21,13 @@ import { IonicStorageModule } from '@ionic/storage';
     HomePage,
     AvailablePage,
     WantedPage,
-    AvailablePostPage
+    AvailablePostPage,
+    WantedPostPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    HttpClientModule,
     IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
@@ -31,13 +36,15 @@ import { IonicStorageModule } from '@ionic/storage';
     HomePage,
     AvailablePage,
     WantedPage,
-    AvailablePostPage
+    AvailablePostPage,
+    WantedPostPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     Camera,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    AreasProvider,
   ]
 })
 export class AppModule {}

@@ -1,10 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { WantedPostPage } from '../wanted-post/wanted-post';
-
 
 /**
- * Generated class for the WantedPage page.
+ * Generated class for the WantedPostPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -12,19 +10,16 @@ import { WantedPostPage } from '../wanted-post/wanted-post';
 
 @IonicPage()
 @Component({
-  selector: 'page-wanted',
-  templateUrl: 'wanted.html',
+  selector: 'page-wanted-post',
+  templateUrl: 'wanted-post.html',
 })
-export class WantedPage {
+export class WantedPostPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad WantedPage');
+    console.log('ionViewDidLoad WantedPostPage');
   }
 
-  openWantedPost() {
-    this.navCtrl.push(WantedPostPage);
-  }
 }
