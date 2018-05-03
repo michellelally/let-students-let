@@ -5,82 +5,56 @@
   Ionic pages and navigation.
 -->
 <ion-header>
+  <ion-navbar>
+    <ion-title>Post your wanted advertisement</ion-title>
+  </ion-navbar>
+</ion-header>
 
-    <ion-navbar>
-      <ion-title>Post your wanted advertisement</ion-title>
-    </ion-navbar>
-  
-  </ion-header>
-  
-  
-  <ion-content padding>
-  
-    <ion-list>
-  
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Your Name</ion-label>
+      <ion-input type="text" [(ngModel)]="name"></ion-input>
+    </ion-item>
+    <br>
+    <ion-item>
+      <ion-label floating>Telephone</ion-label>
+      <ion-input type="tel" [(ngModel)]="phone"></ion-input>
+    </ion-item>
+    <br>
+    <ion-list radio-group [(ngModel)]="type">
       <ion-item>
-        <ion-label floating>Your Name</ion-label>
-        <ion-input type="text" [(ngModel)]="name"></ion-input>
+        <ion-label> House </ion-label>
+        <ion-radio value="House"></ion-radio>
       </ion-item>
-      <br>
-  
       <ion-item>
-        <ion-label floating>Telephone</ion-label>
-        <ion-input type="tel" [(ngModel)]="phone"></ion-input>
+        <ion-label> Room </ion-label>
+        <ion-radio value="Room"></ion-radio>
       </ion-item>
-      <br>
-  
-      <ion-list radio-group [(ngModel)]="type">
-        <ion-item>
-          <ion-label> House </ion-label>
-          <ion-radio value="House"></ion-radio>
-        </ion-item>
-        <ion-item>
-          <ion-label> Room </ion-label>
-          <ion-radio value="Room"></ion-radio>
-        </ion-item>
-      </ion-list>
-      <br>
-  
-      <ion-item>
-        <ion-label floating>College</ion-label>
-        <ion-input type="text" [(ngModel)]="college"></ion-input>
-      </ion-item>
-      <br>
-  
-      <ion-item>
-        <ion-label floating>Year</ion-label>
-        <ion-input type="number" min="1" max="8" [(ngModel)]="year"></ion-input>
-      </ion-item>
-      <br>
-      <ion-item>
-        <ion-label>Area</ion-label>
-        <ion-select [(ngModel)]="area">
-          <ion-option *ngFor="let area of areas"> {{ area }}</ion-option>
-        </ion-select>
-      </ion-item>
-      <br>
-  
-      <ion-item>
-        <ion-label>Length of stay</ion-label>
-        <ion-input type="number" min="1" max="12" [(ngModel)]="stay"></ion-input>
-        <ion-select [(ngModel)]="monthsOrYears">
-          <ion-option value="Months">Months</ion-option>
-          <ion-option value="Years">Years</ion-option>
-        </ion-select>
-      </ion-item>
-  
-      <ion-item>
-        <ion-label>Description</ion-label>
-        <ion-textarea [(ngModel)]="description" name="description"></ion-textarea>
-      </ion-item>
-
     </ion-list>
     <br>
+    <ion-item>
+      <ion-label floating>College</ion-label>
+      <ion-input type="text" [(ngModel)]="college"></ion-input>
+    </ion-item>
     <br>
-    <img src="{{ image }}" />
+    <ion-item>
+      <ion-label floating>Year</ion-label>
+      <ion-input type="number" min="1" max="8" [(ngModel)]="year"></ion-input>
+    </ion-item>
     <br>
-    <button (click)="saveDetails()" ion-button color="secondary" outline block>Post!</button>
-  
-  
-  
-  </ion-content>
+    <ion-item>
+      <ion-label>Area</ion-label>
+      <ion-select [(ngModel)]="area">
+        <ion-option *ngFor="let area of areas"> {{ area }}</ion-option>
+      </ion-select>
+    </ion-item>
+    <br>
+    <ion-item>
+      <ion-label>Description</ion-label>
+      <ion-textarea [(ngModel)]="description" name="description"></ion-textarea>
+    </ion-item>
+  </ion-list>
+  <br>
+  <button (click)="saveDetails()" ion-button color="secondary" outline block>Post</button>
+</ion-content>

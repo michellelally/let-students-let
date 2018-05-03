@@ -5,32 +5,26 @@
   Ionic pages and navigation.
 -->
 <ion-header>
+  <ion-navbar>
+    <ion-title>Wanted Ads</ion-title>
+  </ion-navbar>
+</ion-header>
 
-    <ion-navbar>
-      <ion-title>Wanted Ads</ion-title>
-    </ion-navbar>
-  
-  </ion-header>
-  
-  <ion-content padding>
-    <div style="text-align: center">
-      <button (click)="openWantedPost()" ion-button large block color="secondary" outline> Make a post </button>
-    </div>
-  
-    <ion-card >
-  
+<ion-content padding class="card-background-page">
+  <button (click)="openWantedPost()" ion-button large block color="secondary" outline> Make a post </button>
+  <h1 align="center">Wanted Listings</h1>
+  <div class="cards">
+    <ion-card>
       <ion-item>
         <h2> {{ name }}</h2>
         <p> {{ type }}</p>
       </ion-item>
-    
-      <ion-item>
-        <ion-label>Description</ion-label>
-      </ion-item>
       <ion-card-content>
+        <ion-item>
+          <p> Description</p>
+        </ion-item>
         <p>{{ description }}</p>
       </ion-card-content>
-  
       <ion-row>
         <ion-col>
           <button ion-button icon-left clear small left>
@@ -44,13 +38,7 @@
             <div> {{ phone }} </div>
           </button>
         </ion-col>
-        <ion-col center>
-            <button ion-button icon-left clear small right>
-              <ion-icon name="md-time"></ion-icon>
-              <div> {{ stay }} {{ monthsOrYears }}</div>
-            </button>
-          </ion-col>
       </ion-row>
-  
     </ion-card>
-  </ion-content>
+  </div>
+</ion-content>

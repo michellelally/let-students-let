@@ -28,8 +28,8 @@ export class AvailablePostPage {
   monthsOrYears: string;
   description: string;
   image: any;
-
   areas: any[] = [];
+  ads: any[] = [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public storage: Storage, private camera: Camera, private ap: AreasProvider) {
   }
@@ -71,26 +71,27 @@ export class AvailablePostPage {
   }
 
   saveDetails() {
+   this.ads = [
+     {
+       "name": this.name,
+       "phone": this.phone,
+       "type": this.type
+
+     }
+   ];
+   this.storage.set("ads", JSON.stringify(this.ads));
     console.log(this.name);
     this.storage.set("name", this.name);
     console.log(this.phone);
     this.storage.set("phone", this.phone);
     console.log(this.type);
     this.storage.set("type", this.type);
-    console.log(this.rooms);
-    this.storage.set("rooms", this.rooms);
     console.log(this.price);
     this.storage.set("price", this.price);
     console.log(this.area);
     this.storage.set("area", this.area);
-    console.log(this.stay);
-    this.storage.set("stay", this.stay);
-    console.log(this.monthsOrYears);
-    this.storage.set("monthsOrYears", this.monthsOrYears);
     console.log(this.description);
     this.storage.set("description", this.description);
-
-    
     this.storage.set("image", this.image);
     console.log(this.image);
     this.navCtrl.pop();

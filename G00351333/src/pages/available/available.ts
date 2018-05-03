@@ -36,6 +36,7 @@ export class AvailablePage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AvailablePage');
+    
 
   }
 

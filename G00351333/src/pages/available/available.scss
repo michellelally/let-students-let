@@ -1,11 +1,19 @@
 page-available {
-
-    .cards {
-        ion-card{
-            height: 250px;
-            width: 390px;
-            position: relative;
+    .card-background-page{
+        .cards:empty {
+            display:none;
         }
-        
+        .cards{
+            border: 2px solid grey;
+            border-radius: 40px 20px;
+            margin: 10px;
+            padding: 10px;
+            background-color: rgb(239, 83, 80); 
+        }
+           
+     
+            
+
     }
+
 }
