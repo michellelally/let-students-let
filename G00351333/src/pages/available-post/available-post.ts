@@ -36,9 +36,8 @@ export class AvailablePostPage {
 
   ionViewDidLoad() {
     this.ap.getAreasData().subscribe(data => {
-      this.areas=data.areas;
-    })    
-
+      this.areas = data.areas;
+    })
   }
 
   takePhoto() {
@@ -61,7 +60,7 @@ export class AvailablePostPage {
       sourceType: this.camera.PictureSourceType.PHOTOLIBRARY,
       destinationType: this.camera.DestinationType.DATA_URL,
       encodingType: this.camera.EncodingType.JPEG //,
-   //   mediaType: this.camera.MediaType.PICTURE,
+      //   mediaType: this.camera.MediaType.PICTURE,
     };
 
     this.camera.getPicture(options).then((imageData) => {
@@ -71,15 +70,18 @@ export class AvailablePostPage {
   }
 
   saveDetails() {
-   this.ads = [
-     {
-       "name": this.name,
-       "phone": this.phone,
-       "type": this.type
-
-     }
-   ];
-   this.storage.set("ads", JSON.stringify(this.ads));
+    this.ads = [
+      {
+        name: this.name,
+        phone: this.phone,
+        type: this.type,
+        price: this.price,
+        area: this.area,
+        description: this.description,
+        image: this.image
+      }
+    ];
+    this.navCtrl.push("ads", this.ads);
     console.log(this.name);
     this.storage.set("name", this.name);
     console.log(this.phone);
@@ -93,8 +95,7 @@ export class AvailablePostPage {
     console.log(this.description);
     this.storage.set("description", this.description);
     this.storage.set("image", this.image);
-    console.log(this.image);
     this.navCtrl.pop();
-}
+  }
 
 }

@@ -34,9 +34,7 @@ export class AvailablePage {
   constructor(public navCtrl: NavController, public navParams: NavParams, public storage: Storage) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad AvailablePage');
-    
+  ionViewDidLoad(){
 
   }
 
@@ -45,6 +43,7 @@ export class AvailablePage {
   }
 
   ionViewWillEnter() {
+    
     this.storage.get("name").then((data) => {
       this.name = data;
     })
@@ -78,8 +77,6 @@ export class AvailablePage {
       .catch((err) => {
         console.log("Database retrieval error");
       })
-      this.storage.clear();
-
   }
 
 }

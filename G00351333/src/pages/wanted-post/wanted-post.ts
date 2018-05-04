@@ -27,7 +27,6 @@ export class WantedPostPage {
   monthsOrYears: string;
   description: string;
   image: any;
-
   areas: any[] = [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public storage: Storage, private ap: AreasProvider) {
@@ -37,7 +36,6 @@ export class WantedPostPage {
     this.ap.getAreasData().subscribe(data => {
       this.areas=data.areas;
     })
-
   }
 
   saveDetails() {
@@ -53,10 +51,6 @@ export class WantedPostPage {
     this.storage.set("yearWanted", this.type);
     console.log(this.area);
     this.storage.set("areaWanted", this.area);
-    console.log(this.stay);
-    this.storage.set("stayWanted", this.stay);
-    console.log(this.monthsOrYears);
-    this.storage.set("monthsOrYearsWanted", this.monthsOrYears);
     console.log(this.description);
     this.storage.set("descriptionWanted", this.description);
     this.navCtrl.pop();

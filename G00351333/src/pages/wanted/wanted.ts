@@ -34,10 +34,6 @@ export class WantedPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, public storage: Storage) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad WantedPage');
-  }
-
   openWantedPost() {
     this.navCtrl.push(WantedPostPage);
   }
