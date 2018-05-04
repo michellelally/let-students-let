@@ -54,13 +54,12 @@ export class AvailablePostPage {
     });
   }
 
-  choosePicture() {
+  choosePhoto() {
     const options: CameraOptions = {
       quality: 50,
       sourceType: this.camera.PictureSourceType.PHOTOLIBRARY,
       destinationType: this.camera.DestinationType.DATA_URL,
-      encodingType: this.camera.EncodingType.JPEG //,
-      //   mediaType: this.camera.MediaType.PICTURE,
+      encodingType: this.camera.EncodingType.JPEG 
     };
 
     this.camera.getPicture(options).then((imageData) => {
@@ -81,7 +80,6 @@ export class AvailablePostPage {
         image: this.image
       }
     ];
-    this.navCtrl.push("ads", this.ads);
     console.log(this.name);
     this.storage.set("name", this.name);
     console.log(this.phone);

@@ -34,10 +34,6 @@ export class AvailablePage {
   constructor(public navCtrl: NavController, public navParams: NavParams, public storage: Storage) {
   }
 
-  ionViewDidLoad(){
-
-  }
-
   openAvailablePost() {
     this.navCtrl.push(AvailablePostPage);
   }
